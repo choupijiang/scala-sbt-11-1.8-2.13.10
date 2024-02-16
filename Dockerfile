@@ -3,4 +3,5 @@ MAINTAINER zhangshenghu zhangsh204@midea.com
 USER root
 RUN mkdir -p /root/.sbt/1.0/plugins
 COPY ./plugins.sbt /root/.sbt/1.0/plugins/plugins.sbt
-RUN sbt assembly
+COPY ./build.sbt /root/build.sbt
+RUN sbt update

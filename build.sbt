@@ -1,0 +1,42 @@
+val AkkaVersion = "2.6.20"
+val LogbackVersion = "1.2.3"
+val scalaVersion = "2.13.10"
+val AkkaHttpVersion = "10.2.10"
+val AkkaGRPC = "2.0.0"
+val ScalaTest = "3.2.14"
+val JacksonVersion = "2.11.4"
+val AkkaManagementVersion = "1.1.4"
+val ScalikeJdbcVersion = "4.0.0"
+
+
+libraryDependencies += "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion
+libraryDependencies += "com.typesafe.akka" %% "akka-stream" % AkkaVersion
+libraryDependencies += "com.typesafe.akka" %% "akka-http" % AkkaHttpVersion
+libraryDependencies += "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttpVersion
+libraryDependencies += "com.typesafe.akka" %% "akka-actor-testkit-typed" % AkkaVersion % Test
+libraryDependencies += "com.typesafe.akka" %% "akka-discovery" % AkkaVersion
+libraryDependencies += "com.typesafe.akka" %% "akka-http2-support" % AkkaHttpVersion
+libraryDependencies += "com.typesafe.akka" %% "akka-cluster-typed" % AkkaVersion
+libraryDependencies += "com.typesafe.akka" %% "akka-cluster" % AkkaVersion
+libraryDependencies += "com.typesafe.akka" %% "akka-serialization-jackson" % AkkaVersion
+libraryDependencies += "com.softwaremill.sttp.client3" %% "core" % "3.8.3"
+libraryDependencies += "com.softwaremill.sttp.client3" %% "json4s" % "3.8.3"
+libraryDependencies += "com.softwaremill.sttp.client3" %% "slf4j-backend" % "3.8.3"
+libraryDependencies += "com.lightbend.akka.management" %% "akka-management-cluster-bootstrap" % AkkaManagementVersion
+libraryDependencies += "com.lightbend.akka.management" %% "akka-management-cluster-http" % AkkaManagementVersion
+libraryDependencies += "com.lightbend.akka.discovery" %% "akka-discovery-kubernetes-api" % AkkaManagementVersion
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.14"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.14" % "test"
+libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.28" exclude("com.google.protobuf", "protobuf-java")
+libraryDependencies +=  "com.typesafe.akka" %% "akka-persistence-query" % AkkaVersion
+libraryDependencies +=  "com.typesafe.akka" %% "akka-cluster-sharding" % AkkaVersion
+libraryDependencies += "org.json4s" %% "json4s-native" % "4.1.0-M2"
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.18.0" % Test
+libraryDependencies += "com.jayway.jsonpath" % "json-path" % "2.7.0"
+libraryDependencies += "com.fasterxml.jackson.core" % "jackson-databind" % "2.13.4.2"
+libraryDependencies += "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.13.4" exclude("com.fasterxml.jackson.core", "jackson-core")
+libraryDependencies += "io.jvm.uuid" %% "scala-uuid" % "0.3.1"
+libraryDependencies += "ru.yandex.clickhouse" % "clickhouse-jdbc" % "0.2" excludeAll (ExclusionRule(organization = "com.fasterxml.jackson.core"))
+libraryDependencies += "cn.hutool" % "hutool-all" % "5.8.12"
+libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.13.10"
+libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.10"
